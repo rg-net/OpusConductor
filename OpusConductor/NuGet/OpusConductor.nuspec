@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>OpusConductor</id>
+    <version>1.0.3</version>
+    <description>An easy-to-use library for encoding and decoding 16-bit audio using the Opus Audio Codec. NOTE: This library is a wrapper around the official libopus, and does not contain code for parsing .opus container files.</description>
+    <authors>Mesquite Information Technologies LLC</authors>
+    <license type="expression">MIT</license>
+    <projectUrl>N/A</projectUrl>
+    <copyright>Copyright © 2019 Mesquite Information Technologies LLC</copyright>
+    <tags>Opus, Audio, Codec, Encoder, Decoder, VoIP</tags>
+    <dependencies>
+      <dependency id="OpusConductor.opus.win-x86" version="1.3.1" />
+      <dependency id="OpusConductor.opus.win-x64" version="1.3.1" />
+    </dependencies>
+
+    <releaseNotes>Added improved encode and decode methods. IMPORTANT: Deprecated the old encode and decode methods.</releaseNotes>
+  </metadata>
+  <files>
+    <file src="..\bin\Release\netstandard2.0\*.*" target="lib\netstandard2.0" />
+
+    <file src="OpusConductor.targets" target="build" />
+  </files>
+</package>
