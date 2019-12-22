@@ -14,11 +14,11 @@ Install-Package OpusConductor
 ### Basic Usage
 A simple example of encoding and decoding audio:
 ```csharp
-using (var encoder = new OpusEncoder(OpusOptimizer.Clarity, OpusSampleRate.48k, OpusAudioChannels.Stereo)
+using (var encoder = new OpusEncoder(OpusOptimizer.Clarity, OpusSampleRate._48k, OpusAudioChannels.Stereo)
 {
     VBR = true // Variable bitrate
 })
-using (var decoder = new OpusDecoder(48000, 2))
+using (var decoder = new OpusDecoder(OpusSampleRate._48k, OpusAudioChannels.Stereo))
 {
     // 40 ms of silence at 48 KHz (2 channels).
     byte[] inputPCMBytes = new byte[40 * 48000 / 1000 * 2 * 2];
